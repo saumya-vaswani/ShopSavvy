@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: #000;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top:0;
+}
+header h1{
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 3.2rem;
+    font-size: 1.1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:last-of-type{
+    padding-right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color:black;
+}
+main>div{
+    width: 30vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+main>div p{
+    width:10vw;
+}
+main div:hover{
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;  
+}
+main div img{
+    width: 100px;
+    height: 100px;
+}
+main div button{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+main div button:hover{
+    background-color: black;
+    color: white;
+    border: none;
+}
+div div:hover{
+    box-shadow: none;
+}
+h5{
+    font-size: 20px;
+    margin: 10px 0 20px;
+}
+
+input{
+    width: 30px;
+}
