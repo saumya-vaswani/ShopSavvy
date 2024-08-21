@@ -94,3 +94,30 @@ h5{
 input{
     width: 30px;
 }
+
+.stkQty{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    border: 0.2rem solid black;
+    margin: 0.8rem 0;
+    -o-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+
+    & button{
+        background-color: transparent;
+        font-size: 1rem;
+        padding: 0.6rem 2rem;
+        font-weight: bold;
+        border: none;
+    }
+
+    & p {
+        padding: 0 3rem;
+        margin: 0;
+        font-weight: bold;
+    }
+}

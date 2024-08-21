@@ -1,5 +1,5 @@
-let main=document.getElementById("main");
-let cdata=JSON.parse(localStorage.getItem('cdata'));
+let main = document.getElementById("main");
+let cdata = JSON.parse(localStorage.getItem('cdata'));
 console.log(cdata);
 
 
@@ -10,8 +10,11 @@ displaydata = (data) => {
        <p>${element.title}</p>
        <strong>Price: ${element.price}</strong>
        <div>
-       <h5>Quantity
-       <input type="number" min="1" value="1"></h5>
+       <div class="stkQty">
+       <button class="qtyInc">+</button>
+       <p class="qtySel">1</p>
+       <button class="qtyDec">-</button>
+       </div>
        <button class="wishbtn" id='${element.id}w'>Add to Wishlist</button>
        <button class='cartbtn' id='${element.id}c'>Remove from Cart</button>
        </div>`
@@ -22,12 +25,12 @@ displaydata = (data) => {
         cartbtns.addEventListener('click', () => {
             cdata = cdata.filter(ele => ele.id != parseInt(cartbtns.id));
             localStorage.setItem('cdata', JSON.stringify(cdata));
-            cartbtns.parentElement.parentElement.style.display='none';
+            cartbtns.parentElement.parentElement.style.display = 'none';
         })
     })
 }
-if(cdata==""){
-    main.innerHTML=`<h1>Cart is Empty.</h1>`
+if (cdata == "") {
+    main.innerHTML = `<h1>Cart is Empty.</h1>`
 }
 displaydata(cdata);
 
