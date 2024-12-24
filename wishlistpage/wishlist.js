@@ -1,8 +1,6 @@
 let main=document.getElementById("main");
 let wdata=JSON.parse(localStorage.getItem('wdata'));
 console.log(wdata);
-
-
 displaydata = (data) => {
     data.forEach(element => {
         let div = document.createElement("div");
@@ -15,18 +13,13 @@ displaydata = (data) => {
        </div>`
         main.appendChild(div);
         console.log(element);
-
         let wishbtns = div.querySelector('.wishbtn');
         wishbtns.addEventListener('click', () => {
             wdata = wdata.filter(ele => ele.id != parseInt(wishbtns.id));
             localStorage.setItem('wdata', JSON.stringify(wdata));
             wdata.parentElement.parentElement.style.display='none';
-        })
-    })
-}
-
+        })})}
 displaydata(wdata);
-
 if(wdata==""){
     main.innerHTML=`<h1>Wishlist is Empty.</h1>`
 }

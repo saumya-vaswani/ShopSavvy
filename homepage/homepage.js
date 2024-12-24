@@ -3,14 +3,11 @@ let main = document.getElementById("main");
 let cdata = [];
 let wdata = [];
 let fetchdata = async function () {
-    let result = await fetch('https://fakestoreapi.com/products/');
+    let result = await fetch('https://api.escuelajs.co/api/v1/products');
     let data = await result.json();
     console.log(data);
     displaydata(data);
 }
-
-
-
 fetchdata();
 displaydata = (data) => {
     data.forEach(element => {
@@ -26,7 +23,7 @@ displaydata = (data) => {
             }
         })
         let div = document.createElement("div");
-        div.innerHTML = `<img src=${element.image}>
+        div.innerHTML = `<img src=${element.images[1]}>
        <p>${element.title}</p>
        <strong>Price: ${element.price}</strong>
        <div>

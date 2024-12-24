@@ -1,18 +1,14 @@
-
 let fname = document.getElementById("fname");
 let email = document.getElementById("email");
 let pswd = document.getElementById("password");
 let cpswd = document.getElementById("cpassword");
 let btn = document.getElementById("btns");
-
-
 let registrationData = [];
 let jsondata = localStorage.getItem('registrationData');
 if (jsondata) {registrationData = JSON.parse(jsondata);}
 btn.addEventListener('click', (e) => {
     e.preventDefault();
    {
-        
         if (fname.value == '' || email.value == '' || pswd.value == '' || cpswd.value == '') {
             alert("Please fill all the fields.");
         }
